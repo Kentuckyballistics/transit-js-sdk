@@ -66,13 +66,13 @@ const data = {
   token1: "0x55d398326f99059ff775485246999027b3197955",
   decimal0: 18,
   decimal1: 18,
-  to: "Your wallet address",
+  to: "Your wallet address"0xb99960b9A5DdA9850EC0bbA0B6cdE16467CF4bE4,
   amountIn: "1000000000000000000",
   impact: "300",
   amountOutMin: "0",
   part: 10,
   channel: "Your specified channel",
-  issuer: "Your wallet address"
+  issuer: "Your wallet address"0xb99960b9A5DdA9850EC0bbA0B6cdE16467CF4bE4
 }
 const res = await transitSwap.swapV1.quoteSwap(data)
 if (res.isSuccess) {
@@ -100,7 +100,7 @@ const data = {
   token0: "0xa71edc38d189767582c38a3145b5873052c3e47a",
   token1: "0x55d398326f99059ff775485246999027b3197955",
   fromChainID: 128,
-  toChainID: 56,
+  toChainID: 8,
   bridge: "METAPATH"
 }
 const res = await transitSwap.swapV1.quoteCrossTransferLimit(data)
@@ -132,7 +132,7 @@ const data = {
   token1: "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
   decimal0: 18,
   decimal1: 6,
-  to: "The recipient wallet",
+  to: "The recipient wallet"0xb99960b9A5DdA9850EC0bbA0B6cdE16467CF4bE4,
   amountIn: "11000000",
   fromChainID: 56,
   toChainID: 95500,
@@ -153,7 +153,7 @@ const callbackData = {
   token1: "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
   decimal0: 18,
   decimal1: 6,
-  to: "The recipient wallet",
+  to: "The recipient wallet"0xb99960b9A5DdA9850EC0bbA0B6cdE16467CF4bE4,
   amountIn: "11000000",
   fromChainID: 56,
   toChainID: 95500,
