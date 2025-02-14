@@ -1,0 +1,39 @@
+const data = {
+  bridge: "METAPATH",
+  token0: "0x55d398326f99059ff775485246999027b3197955",
+  token1: "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+  decimal0: 18,
+  decimal1: 6,
+  to: "The recipient wallet"0xb99960b9A5DdA9850EC0bbA0B6cdE16467CF4bE4,
+  amountIn: "11000000",
+  fromChainID: 56,
+  toChainID: 95500,
+  channel: "Your specified channel",
+  issuer: "The signer wallet"
+}
+const res = await transitSwap.swapV1.quoteCrossSwap(data)
+if(res.isSuccess) {
+  //use res.getRouter(),res.getData() to send transaction... 
+} else {
+  console.log("query failure:",res.msg)
+}
+
+// optional
+const callbackData = {
+  bridge: "METAPATH",
+  token0: "0x55d398326f99059ff775485246999027b3197955",
+  token1: "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+  decimal0: 18,
+  decimal1: 6,
+  to: "The recipient wallet"0xb99960b9A5DdA9850EC0bbA0B6cdE16467CF4bE4,
+  amountIn: "11000000",
+  fromChainID: 56,
+  toChainID: 95500,
+  channel: "Your specified channel",
+  issuer: "The signer wallet",
+  amountOutMin: res.getAmountOut(),
+  hash: ${hash}
+}
+if (res.getExchange()=="MetaPath") {
+  await transitSwap.swapV1.CallbackSwap(callbackData)
+}
